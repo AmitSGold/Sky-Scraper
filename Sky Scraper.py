@@ -124,7 +124,7 @@ class Sky_Scraper:
       if 'Sorry, we found no results on these dates' in self.soup.text:
           print("No flights found for this destination on these dates")
           return True
-      elif "Want non-stop flights" or "Want a non-stop flight" in soup.text:
+      elif "Want non-stop flights" or "Want a non-stop flight" in self.soup.text:
           go = self.driver.find_element_by_class_name("BpkText_bpk-text__2NHsO.BpkText_bpk-text--lg__3vAKN.BpkText_bpk-text--bold__4yauk")
           go.click()
           self.get_new_URL()        
